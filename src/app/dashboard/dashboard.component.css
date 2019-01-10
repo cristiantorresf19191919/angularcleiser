@@ -1,0 +1,139 @@
+/* SLIDESHOW CON ANIMACIONES PURO CSS */
+
+.wrapper {
+    width: 100%;
+    height:80%;
+    position:absolute;    
+    margin: 0 auto;
+    border: 4px solid black;
+    border-radius: 20px;
+    z-index: -2;
+  
+  
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .wrapper {
+      width: 100%;
+      height: 20%;
+    }
+  }
+  
+  #slider {
+    overflow: hidden;
+  
+  
+  }
+  
+  /*
+  .imgdiv {
+    width: 20%;
+    float: left;
+    border: 1px solid red;
+  }*/
+  
+  #slider figure {
+    width: 500%;
+    position: relative;
+    margin: 0;
+    left: 0;
+    opacity: 1;
+    animation: slider 16s infinite running;
+  
+  }
+  
+  
+  #slider figure img {
+    width: 20%;
+    float: left;
+  
+    border-radius: 20px;
+  
+  
+  
+  
+  }
+  
+  
+  @keyframes slider {
+    0% {
+      left: 0;
+      opacity: 1;
+  
+    }
+  
+    20% {
+  
+      left: 0;
+      opacity: 1;
+  
+  
+    }
+  
+    23% {
+      opacity: 0.2;
+    }
+  
+  
+    25% {
+      left: -100%;
+      opacity: 1;
+  
+  
+  
+    }
+  
+  
+  
+    45% {
+      left: -100%;
+      opacity: 1;
+  
+    }
+  
+    47% {
+      opacity: 0.2;
+    }
+  
+    50% {
+      left: -200%;
+      opacity: 1;
+  
+  
+    }
+  
+  
+  
+    70% {
+      left: -200%;
+      opacity: 1;
+  
+  
+    }
+  
+    73% {
+      opacity: 0.2;
+    }
+  
+    75% {
+      left: -300%;
+      opacity: 1;
+  
+    }
+  
+    95% {
+      left: -300%;
+      opacity: 1;
+    }
+  
+    98% {
+      opacity: 0.2;
+    }
+  
+    100% {
+      left: -400%;
+      opacity: 1;
+  
+    }
+  }
+  

@@ -1,0 +1,31 @@
+<app-navegacion></app-navegacion>
+<!-- Contact Section -->
+<div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+  <h1 class="w3-text-orange animated rubberBand">Inicia Sesión</h1>
+  <hr style="width:200px" class="w3-opacity" />
+
+  <form (submit)="botoLogin()" >
+    <p class="testde">Usuario</p>
+    
+
+    <p>
+      <input class="w3-input w3-padding-16 yummy" type="text" placeholder="solo Username" [(ngModel)]="usuario" name="usuario"  />
+    </p>
+    
+    <p class="testde">Contraseña</p>
+
+    
+    <p>
+      <input class="w3-input w3-padding-16 yummy" type="password" placeholder="Password" [(ngModel)]="contrasena" name="contrasena" (keyup)="onKey($event)"/>
+      
+    </p>
+    <p class="probando" [ngClass]="{'animated shake':f===9}"> {{probando}}</p>
+    
+    <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+      <i class="fa fa-sign-in-alt"></i> Entrar
+    </button>
+  </form>
+  <!-- End Contact Section -->
+</div>
+
+

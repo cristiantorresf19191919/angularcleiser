@@ -1,0 +1,80 @@
+<app-navegacion></app-navegacion>
+<!-- Contact Section -->
+<div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+
+  <h1 class="w3-text-orange animated rubberBand">Unete...</h1>
+
+
+  <hr style="width:200px" class="w3-opacity">
+ 
+
+  <div class="w3-section">
+    <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Colombia </p>
+    <br>
+    <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone</p>
+    <br>
+    <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email:
+      cristian.torres19@hotmail.com Developer</p>
+  </div><br>
+
+
+  <form (submit)=onRegisterSubmit()>
+  
+    <p><input [(ngModel)]="Email" name="Email" class="w3-input w3-padding-16 yummy" type="text" placeholder="Email"></p>
+    
+    
+    <p><input [(ngModel)]="password" name="password" class="w3-input w3-padding-16 yummy" type="password" placeholder="Elije tu contraseña"
+        required name="Message"></p>
+    
+    <p><input [(ngModel)]="password_2" name="password_2" class="w3-input w3-padding-16 yummy" type="password" placeholder="Comprueba tu contraseña"
+        required name="Message"></p>
+
+    <p>
+      <br>
+      <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+        <i class="fa fa-paper-plane"></i> Unete
+      </button>
+      
+      
+
+    </p>
+    
+
+    <div>
+      <!--Mensajes-->
+      <div class="alert info">
+        <span class="closebtn">&times;</span>
+        <strong>Info!</strong> Indicates a neutral informative change or action.
+      </div>
+
+      <div class="alert info" [ngClass]="{'aparezca':id===1}">
+        <span class="closebtn" (click)="flashMessages(id=1)">&times;</span>
+        <strong>Pilas!</strong> Pusiste el email en un formato incorrecto.
+      </div>
+
+      <div class="alert warning" [ngClass]="{'aparezca':id===2}">
+        <span class="closebtn" (click)="flashMessages(id=2)">&times;</span>
+        <strong>Hey!</strong> Debes Completar todos los campos .
+      </div>
+
+      <div class="alert success animated rubberBand" [ngClass]="{'aparezca':id===3}">
+        <span class="closebtn" (click)="flashMessages(id=3)">&times;</span>
+        <strong>Exito!</strong> Todos los datos parecen correctos
+      </div>
+
+      <div class="alert info" [ngClass]="{'aparezca':id===4}">
+        <span class="closebtn" (click)="flashMessages(id=4)">&times;</span>
+        <strong>Pilas!</strong> Las contraseñas no coinciden
+      </div>
+    </div>
+    <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+      <h4 id="mensajillo" class="w3-text-orange animated rubberBand">{{mensajillo}}</h4>
+    </div>
+
+  </form>
+  <!-- End Contact Section -->
+
+
+
+
+  <app-mensajes></app-mensajes>

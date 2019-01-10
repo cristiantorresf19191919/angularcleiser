@@ -1,0 +1,21 @@
+.testde {
+  color: white;
+}
+
+.ald {
+  width: 60%;
+}
+h1{
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.probando{
+  letter-spacing: 1em;
+  text-decoration-style: double;
+  color:rgb(28, 255, 7);
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 3px 3px 6px white;
+  
+  
+}

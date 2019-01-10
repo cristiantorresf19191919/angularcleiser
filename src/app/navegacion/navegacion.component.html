@@ -1,0 +1,39 @@
+<div id="navegacion">
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+      <!-- Avatar image in top left corner -->
+      <img src="assets/cleiser.gif" style="width:100%" class="w3-image">
+      <a routerLink="/" class="w3-bar-item w3-button w3-padding-large w3-hover-black"(click)="competencia(3)"
+      [ngClass]="{'animated lightSpeedOut':c===3}">
+        <i class="fa fa-home w3-xxlarge  icono" ></i>
+        <p class="bar-mobile">HOME</p>
+      </a>
+
+      <a routerLink="/Register" class="w3-bar-item w3-button w3-padding-large w3-hover-black" (click)="competencia(1)"
+      [ngClass]="{'animated lightSpeedOut':c===1}">
+        <i class="fa fa-envelope w3-xxlarge  icono "></i>
+        <p class="bar-mobile" >Registrate</p>
+      </a>
+
+      <a routerLink="/Login" class="w3-bar-item w3-button w3-padding-large w3-hover-black"
+      (click)="competencia(2)"
+      [ngClass]="{'animated lightSpeedOut':c===2}">
+        <i class="fa fa-dungeon w3-xxlarge  icono "></i>
+        <p class="bar-mobile">LOGIN</p>
+      </a>
+
+    </nav>
+
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+      <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small w3-text-orange">
+        <a routerLink="/" class="w3-bar-item w3-button w3-large fa fa-home w3-hover-black icono" style="width:50% !important">Home</a>
+
+
+        <a routerLink="/Register" class="w3-bar-item w3-button w3-large fa fa-envelope-open w3-hover-black icono" style="width:50% !important">Registro</a>
+
+        <a routerLink="/Login" class="w3-bar-item w3-button w3-large fa fa-archway w3-hover-black icono" style="width:50% !important">Entrar</a>
+      </div>
+    </div>
+
+  </div>
