@@ -23,14 +23,11 @@ export class RegistracionComponent implements OnInit {
   titularAlerta: string;
   final_pswd: string;
   id: number;
-  name: string;
-  username: string;
+ 
   Email: string;
   password: string;
   password_2: string;
-  language: string;
-  delfinquest: string;
-  tenquest: string;
+ 
 
   constructor(
     private servicioValide: ValidateService,
@@ -47,16 +44,13 @@ export class RegistracionComponent implements OnInit {
 
   onRegisterSubmit() {
     const usuario = {
-      name: this.name,
-      username: this.username,
+     
       Email: this.Email,
       password: this.password,
       password_2: this.password_2,
-      language: this.language,
-      delfinquest: this.delfinquest,
-      tenquest: this.tenquest
+     
     };
-    console.log(usuario.name);
+  
 
     if (!this.servicioValide.validateRegister(usuario)) {
       console.log("field in all fields");
@@ -71,7 +65,7 @@ export class RegistracionComponent implements OnInit {
 
     // Validate Email
     if (!this.servicioValide.validateEmail(usuario.Email)) {
-      console.log("email is fucking incorrect");
+      console.log("email is  incorrect");
       this.id = 1;
       return false;
     }
